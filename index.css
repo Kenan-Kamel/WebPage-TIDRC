@@ -45,6 +45,12 @@ body {
     transition-duration: 2.5s;
      
 }
+#text{
+    
+    
+    text-align: center;
+    color: black;
+}
 /* */
 .container {
     color: white;
@@ -123,8 +129,7 @@ body {
 .box2:hover  {
     
     width:100%; 
-    
-    
+
     
 } 
 
