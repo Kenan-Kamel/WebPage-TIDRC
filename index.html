@@ -65,13 +65,46 @@
 
     Box2.addEventListener("click", e => {
         console.log(e)
-        Box3.classList.remove("hidden"); 
+       Box3.classList.remove("hidden"); 
        Box4.classList.remove("hidden"); 
        Box5.classList.remove ("hidden");
-       Box3.classList.add("box_trans"); 
-  
+      
+       // add movmvent 
+       Box5.classList.add("box_effect");
+       Box4.classList.add("box_effect");
+       Box3.classList.add("box_effect");
+
+
 
     })
+    Box3.addEventListener("mousemove", e => {
+       
+        Box3.classList.remove("box_effect");
+       Box3.classList.add("box_effect2");
+    })
+    Box3.addEventListener("mouseleave", e => {  
+      Box3.classList.remove("box_effect2");
+
+   })
+
+   Box4.addEventListener("mousemove", e => {
+       
+       Box4.classList.remove("box_effect");
+      Box4.classList.add("box_effect2");
+   })
+   Box4.addEventListener("mouseleave", e => {  
+     Box4.classList.remove("box_effect2");
+
+  })
+  Box5.addEventListener("mousemove", e => {
+       
+       Box5.classList.remove("box_effect");
+      Box5.classList.add("box_effect2");
+   })
+   Box5.addEventListener("mouseleave", e => {  
+     Box5.classList.remove("box_effect2");
+
+  })
 </script>
 
 </html>
