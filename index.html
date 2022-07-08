@@ -63,7 +63,7 @@
         <p> Avoid computer-automated social interactions for children, as they have no effect on their engagement  </p>
     </div>
      
-    <div class="box8">
+    <div class="box9">
         <p> *Provide an option for children to credit each other, rather than using automated means of acknowledgment </p>
     </div>
 
@@ -75,9 +75,17 @@
     const Box3 = document.querySelector(".box3");
     const Box4 = document.querySelector(".box4");
     const Box5 = document.querySelector(".box5");
+    const Box6 = document.querySelector(".box6");
+    const Box7 = document.querySelector(".box7");
+    const Box8 = document.querySelector(".box8");
+    const Box9 = document.querySelector(".box9");
     Box3.classList.add("hidden"); 
     Box4.classList.add("hidden"); 
     Box5.classList.add("hidden"); 
+    Box6.classList.add("hidden"); 
+    Box7.classList.add("hidden"); 
+    Box8.classList.add("hidden"); 
+    Box9.classList.add("hidden");
 
     Box2.addEventListener("click", e => {
         console.log(e)
@@ -102,7 +110,18 @@
       Box3.classList.remove("box_effect2");
 
    })
-
+   Box3.addEventListener("click", e => {
+    Box6.classList.remove("hidden"); 
+    Box8.classList.add("hidden");
+    Box7.classList.add("hidden");
+    Box9.classList.add("hidden");
+   })
+   Box4.addEventListener("click", e => {
+    Box7.classList.remove("hidden"); 
+    Box8.classList.add("hidden");
+    Box6.classList.add("hidden");
+    Box9.classList.add("hidden");
+   })
    Box4.addEventListener("mousemove", e => {
        
        Box4.classList.remove("box_effect");
@@ -112,6 +131,7 @@
      Box4.classList.remove("box_effect2");
 
   })
+
   Box5.addEventListener("mousemove", e => {
        
        Box5.classList.remove("box_effect");
@@ -121,6 +141,45 @@
      Box5.classList.remove("box_effect2");
 
   })
+  Box5.addEventListener("click", e => {
+    Box8.classList.remove("hidden"); 
+    Box9.classList.remove("hidden"); 
+    Box7.classList.add("hidden");
+    Box6.classList.add("hidden");
+   })
+
+/// events related to the final output 
+Box6.addEventListener("mousemove", e => {
+      Box6.classList.add("box_effect3");
+   })
+   Box6.addEventListener("mouseleave", e => {  
+     Box6.classList.remove("box_effect3"); 
+  })
+ // events for final about box 7 
+ Box7.addEventListener("mousemove", e => {
+      Box7.classList.add("box_effect3");
+   })
+   Box7.addEventListener("mouseleave", e => {  
+     Box7.classList.remove("box_effect3"); 
+  })
+   
+  // events for final about box 8
+ Box8.addEventListener("mousemove", e => {
+      Box8.classList.add("box_effect3");
+   })
+   Box8.addEventListener("mouseleave", e => {  
+     Box8.classList.remove("box_effect3"); 
+  })
+
+  Box9.addEventListener("mousemove", e => {
+      Box9.classList.add("box_effect3");
+   })
+   Box9.addEventListener("mouseleave", e => {  
+     Box9.classList.remove("box_effect3"); 
+  })
+   
+
+ 
 </script>
 
 </html>
